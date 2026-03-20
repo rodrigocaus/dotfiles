@@ -1,0 +1,17 @@
+bleopt editor=nvim
+# disable ambiguous completion
+bleopt complete_ambiguous=
+
+# disable tab menu
+bleopt complete_menu_complete=
+
+# disable after commands marks
+bleopt prompt_eol_mark=''
+bleopt exec_errexit_mark=
+bleopt exec_exit_mark=
+bleopt edit_marker=
+bleopt edit_marker_error=
+
+# autocomplete style
+ble-face auto_complete='fg=240,underline,italic'
+

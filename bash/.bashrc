@@ -1,5 +1,8 @@
 # .bashrc
 
+# Source ble.sh if session is not initialized
+[[ $- == *i* ]] && source -- ~/.local/share/blesh/ble.sh --attach=none
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
@@ -52,4 +55,7 @@ XDG_CONFIG_HOME=$HOME/.config
 
 # Starship
 eval "$(starship init bash)"
+
+# Attach ble.sh to current session
+[[ ! ${BLE_VERSION-} ]] || ble-attach
 
