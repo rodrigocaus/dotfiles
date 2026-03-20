@@ -1,0 +1,50 @@
+# 1. THE LAYOUT: This defines the order and looks of your prompt
+# We remove the "via" noise and put the directory first
+format = """
+$directory\
+$git_branch\
+$git_status\
+$character"""
+
+# 2. DIRECTORY: Keep it short and sweet
+[directory]
+style = "bold cyan"
+read_only = " 󰌾"
+
+# 3. GIT BRANCH: Clean up that "ref/..." mess
+[git_branch]
+symbol = " "
+style = "bold purple"
+# This removes the "ref/heads/" prefix if it appears
+truncation_length = 24
+truncation_symbol = "…"
+
+# 4. GIT STATUS: Keep the icons, but make them subtle
+[git_status]
+style = "bold red"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+conflicted = "󰀦 "
+ahead = "⇡"
+behind = "⇣"
+diverged = "󰆼"
+untracked = "? "
+staged = "++ "
+modified = "󰏫 "
+renamed = "󰁔 "
+deleted = "󰛇 "
+
+[gcloud]
+disabled = true
+
+[java]
+disabled = true
+
+[kotlin]
+disabled = true
+
+[aws]
+disabled = true
+
+[package]
+disabled = true # Stops it from showing your package.json version
+

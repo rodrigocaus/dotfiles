@@ -1,0 +1,13 @@
+# Ignore the plugins folder (Lazy will redownload them automatically)
+/lua/lazy-lock.json
+/lazy-lock.json
+
+# Ignore temporary/log files
+*.log
+.DS_Store
+undodir/
+shada/
+
+# Ignore the actual plugin files downloaded by Mason/Lazy
+/plugin/
+
