@@ -27,6 +27,14 @@ sudo dnf copr enable atim/starship -y
 sudo dnf install starship -y
 ```
 
+### ble.sh
+
+```bash
+git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
+make -C ble.sh install PREFIX=~/.local
+rm -rf ble.sh
+```
+
 ---
 
 ## Getting Started
@@ -50,6 +58,7 @@ Then, for each configuration you want to activate, run `stow`:
 
 ```bash
 stow --adopt bash
+stow ble
 stow nvim
 stow starship
 ```
@@ -64,6 +73,7 @@ stow -D bash
 ## What's Included
 
 *   **`bash/`**: Bash shell configuration (`.bashrc`)
+*   **`ble/`**: ble.sh configuration (`.blerc`)
 *   **`nvim/`**: Neovim configuration (`init.lua`, `lua/`)
 *   **`starship/`**: Starship prompt configuration (`starship.toml`)
 
