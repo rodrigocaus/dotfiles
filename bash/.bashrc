@@ -32,6 +32,11 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# Git
+export GIT_EDITOR=nvim
+# Kubectl
+export KUBE_EDITOR=nvim
+
 # Krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
@@ -55,6 +60,9 @@ XDG_CONFIG_HOME=$HOME/.config
 
 # Starship
 eval "$(starship init bash)"
+
+# Add Go path
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # Attach ble.sh to current session
 [[ ! ${BLE_VERSION-} ]] || ble-attach
