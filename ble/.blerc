@@ -14,4 +14,11 @@ bleopt edit_marker_error=
 
 # autocomplete style
 ble-face auto_complete='fg=240,underline,italic'
+# disable multiline
+function blerc/emacs-load-hook {
+  ble-bind -f 'C-m' 'accept-line syntax'
+  ble-bind -f 'RET' 'accept-line syntax'
+  return 0
+}
+blehook/eval-after-load keymap_emacs blerc/emacs-load-hook
 
