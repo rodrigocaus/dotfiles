@@ -67,3 +67,7 @@ export PATH=$PATH:$(go env GOPATH)/bin
 # Attach ble.sh to current session
 [[ ! ${BLE_VERSION-} ]] || ble-attach
 
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/rodrigocaus/.local/bin:$PATH"
