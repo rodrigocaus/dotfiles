@@ -67,7 +67,8 @@ export PATH=$PATH:$(go env GOPATH)/bin
 # Attach ble.sh to current session
 [[ ! ${BLE_VERSION-} ]] || ble-attach
 
-
+# Google Cloud use Legacy Credentials to support multiple profiles
+export CLOUDSDK_AUTH_CREDENTIAL_FILE_FOR_ADC="~/.config/gcloud/legacy_credentials/$(gcloud config configurations list --filter='is_active=true' --format='value(name)')/adc.json"
 
 # Added by Antigravity CLI installer
 export PATH="/home/rodrigocaus/.local/bin:$PATH"
