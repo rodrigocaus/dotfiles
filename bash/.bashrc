@@ -72,3 +72,7 @@ export CLOUDSDK_AUTH_CREDENTIAL_FILE_FOR_ADC="~/.config/gcloud/legacy_credential
 
 # Added by Antigravity CLI installer
 export PATH="/home/rodrigocaus/.local/bin:$PATH"
+
+# Terraform autocomplete
+complete -C /usr/bin/terraform terraform
+
